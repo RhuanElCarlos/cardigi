@@ -108,7 +108,9 @@
     /*--image-14: url(/fox.webp);*/
     --image-14: url(https://assets.codepen.io/36869/fox.webp);
     /*--image-15: url(/villager.webp);*/
-    --image-15: url(https://assets.codepen.io/36869/villager.web);
+    --image-15: url(https://assets.codepen.io/36869/fox.webp);
+        --image-16: url(https://assets.codepen.io/36869/fox.webp);
+
 
     --characater-1: 'Cat';
     --characater-2: 'Spider';
@@ -124,7 +126,9 @@
     --characater-12: 'Wolf';
     --characater-13: 'Squid';
     --characater-14: 'Fox';
-    --characater-15: 'Villager';
+    --characater-15: 'Fox';
+        --characater-16: 'Fox';
+
   }
 }
 
@@ -298,7 +302,7 @@ div.characters {
   display: grid;
   gap: .5rem;
   grid-template-columns: repeat(5, minmax(110px, 1fr));
-  grid-template-rows: repeat(3, 160px);
+  grid-template-rows: repeat(4, 160px);
   padding: .5rem;
   background-color: black;
   box-shadow: 6px 6px #222222;
@@ -625,17 +629,36 @@ div.characters {
 .characters:has(div:nth-child(15) > input:checked) + .preview {
   --name: var(--characater-15);
 
-  & > .preview-container {
+   & > .preview-container {
     /* sprite image */
     --sprite-image: var(--image-15);
     /* sprite columns */
     --sprite-c: 5;
     /* sprite image height */
-    --sprite-h: 4768;
+    --sprite-h: 8344;
     /* sprite image width */
     --sprite-w: 2980;
     /* Frame frames */
-    --sprite-f: 37;
+    --sprite-f: 69;
+    /* Frame end position */
+    --sprite-fe: calc(var(--sprite-f) - 1);
+  }
+}
+
+.characters:has(div:nth-child(16) > input:checked) + .preview {
+  --name: var(--characater-16);
+
+   & > .preview-container {
+    /* sprite image */
+    --sprite-image: var(--image-16);
+    /* sprite columns */
+    --sprite-c: 5;
+    /* sprite image height */
+    --sprite-h: 8344;
+    /* sprite image width */
+    --sprite-w: 2980;
+    /* Frame frames */
+    --sprite-f: 69;
     /* Frame end position */
     --sprite-fe: calc(var(--sprite-f) - 1);
   }
