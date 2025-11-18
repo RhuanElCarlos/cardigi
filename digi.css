@@ -667,7 +667,7 @@ div.characters {
 
 div.preview {
   display: grid;
-  height: 570px;
+  height: 540px;
   width: 400px;
   position: relative;
   grid-template-rows: auto 1fr;
