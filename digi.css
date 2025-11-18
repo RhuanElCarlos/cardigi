@@ -141,7 +141,7 @@
       }
 
       .preview {
-        position: fixed;
+        position: relative;
         top: .5rem;
         height: fit-content;
 
