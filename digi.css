@@ -694,7 +694,7 @@ div.preview {
 
   & > .preview-container {
     height: 100%;
-    width: 00%;
+    width: 100%;
     display: grid;
     gap: .5rem;
     place-items: center;
