@@ -141,7 +141,7 @@
       }
 
       .preview {
-        position: sticky;
+        position: fixed;
         top: .5rem;
         height: fit-content;
 
@@ -314,6 +314,7 @@ div.characters {
     overflow: hidden;
     display: grid;
     place-items: center;
+
 
     &:has(input:checked) {
       overflow: visible;
@@ -666,6 +667,8 @@ div.characters {
 
 div.preview {
   display: grid;
+  height: 570px;
+  width: 400px;
   position: relative;
   grid-template-rows: auto 1fr;
   place-items: center;
@@ -675,6 +678,7 @@ div.preview {
   border: 2px solid #4c8ee1;
   box-shadow: 6px 6px #222222;
   user-select: none;
+  
 
   &:before {
     content: var(--name);
@@ -690,7 +694,7 @@ div.preview {
 
   & > .preview-container {
     height: 100%;
-    width: 100%;
+    width: 00%;
     display: grid;
     gap: .5rem;
     place-items: center;
@@ -722,8 +726,10 @@ div.preview {
     & > .sprite-container {
       position: relative;
       z-index: 1;
-      background-color: white;
+      background-color: rgb(247, 246, 246);
       height: 100%;
+      width: 380px;
+
 
       &:has(> div input[type="radio"]:nth-child(2):checked) {
         .sprite {
@@ -785,6 +791,7 @@ div.preview {
         z-index: 1;
         will-change: scale;
         transition: scale 0.2s ease;
+        justify-self: center;
 
         &:hover {
           scale: 1.4;
