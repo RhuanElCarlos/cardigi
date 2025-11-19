@@ -301,7 +301,7 @@
 div.characters {
   display: grid;
   gap: .5rem;
-  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
   grid-template-rows: repeat(4, 160px);
   padding: .5rem;
   background-color: black;
