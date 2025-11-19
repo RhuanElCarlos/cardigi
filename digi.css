@@ -669,7 +669,7 @@ div.preview {
   display: grid;
   height: 540px;
   width: 400px;
-  position: relative;
+  position: sticky;
   grid-template-rows: auto 1fr;
   place-items: center;
   gap: .5rem;
