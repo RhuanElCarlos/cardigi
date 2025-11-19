@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 @font-face {
   font-family: 'Minecraft';
   src: url('https://assets.codepen.io/36869/MinecraftTen-VGORe.woff') format('woff');
@@ -108,9 +99,7 @@
     /*--image-14: url(/fox.webp);*/
     --image-14: url(https://assets.codepen.io/36869/fox.webp);
     /*--image-15: url(/villager.webp);*/
-    --image-15: url(https://assets.codepen.io/36869/fox.webp);
-        --image-16: url(https://assets.codepen.io/36869/fox.webp);
-
+    --image-15: url(https://assets.codepen.io/36869/villager.webp);
 
     --characater-1: 'Cat';
     --characater-2: 'Spider';
@@ -126,9 +115,7 @@
     --characater-12: 'Wolf';
     --characater-13: 'Squid';
     --characater-14: 'Fox';
-    --characater-15: 'Fox';
-        --characater-16: 'Fox';
-
+    --characater-15: 'Villager';
   }
 }
 
@@ -141,7 +128,7 @@
       }
 
       .preview {
-        position: relative;
+        position: sticky;
         top: .5rem;
         height: fit-content;
 
@@ -301,8 +288,8 @@
 div.characters {
   display: grid;
   gap: .5rem;
-  grid-template-columns: repeat(4, minmax(110px, 1fr));
-  grid-template-rows: repeat(4, 160px);
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  grid-template-rows: repeat(3, 160px);
   padding: .5rem;
   background-color: black;
   box-shadow: 6px 6px #222222;
@@ -314,7 +301,6 @@ div.characters {
     overflow: hidden;
     display: grid;
     place-items: center;
-
 
     &:has(input:checked) {
       overflow: visible;
@@ -630,36 +616,17 @@ div.characters {
 .characters:has(div:nth-child(15) > input:checked) + .preview {
   --name: var(--characater-15);
 
-   & > .preview-container {
+  & > .preview-container {
     /* sprite image */
     --sprite-image: var(--image-15);
     /* sprite columns */
     --sprite-c: 5;
     /* sprite image height */
-    --sprite-h: 8344;
+    --sprite-h: 4768;
     /* sprite image width */
     --sprite-w: 2980;
     /* Frame frames */
-    --sprite-f: 69;
-    /* Frame end position */
-    --sprite-fe: calc(var(--sprite-f) - 1);
-  }
-}
-
-.characters:has(div:nth-child(16) > input:checked) + .preview {
-  --name: var(--characater-16);
-
-   & > .preview-container {
-    /* sprite image */
-    --sprite-image: var(--image-16);
-    /* sprite columns */
-    --sprite-c: 5;
-    /* sprite image height */
-    --sprite-h: 8344;
-    /* sprite image width */
-    --sprite-w: 2980;
-    /* Frame frames */
-    --sprite-f: 69;
+    --sprite-f: 37;
     /* Frame end position */
     --sprite-fe: calc(var(--sprite-f) - 1);
   }
@@ -667,9 +634,7 @@ div.characters {
 
 div.preview {
   display: grid;
-  height: 540px;
-  width: 400px;
-  position: sticky;
+  position: relative;
   grid-template-rows: auto 1fr;
   place-items: center;
   gap: .5rem;
@@ -678,7 +643,6 @@ div.preview {
   border: 2px solid #4c8ee1;
   box-shadow: 6px 6px #222222;
   user-select: none;
-  
 
   &:before {
     content: var(--name);
@@ -726,10 +690,8 @@ div.preview {
     & > .sprite-container {
       position: relative;
       z-index: 1;
-      background-color: rgb(247, 246, 246);
+      background-color: white;
       height: 100%;
-      width: 380px;
-
 
       &:has(> div input[type="radio"]:nth-child(2):checked) {
         .sprite {
@@ -791,7 +753,6 @@ div.preview {
         z-index: 1;
         will-change: scale;
         transition: scale 0.2s ease;
-        justify-self: center;
 
         &:hover {
           scale: 1.4;
@@ -910,4 +871,3 @@ div.preview {
     }
   }
 }
-
