@@ -208,7 +208,7 @@
       .characters {
         grid-template-columns: repeat(2, minmax(80px, 1fr));
         grid-template-rows: repeat(9, 100px);
-          max-height: 315px;
+          max-height: 320px;
     overflow-y: scroll;
       }
     }
