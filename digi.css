@@ -206,8 +206,10 @@
   #app {
     main.container {
       .characters {
-        grid-template-columns: repeat(1, minmax(90px, 1fr));
-        grid-template-rows: repeat(16, 100px);
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+        grid-template-rows: repeat(9, 100px);
+          max-height: 315px;
+    overflow-y: scroll;
       }
     }
   }
@@ -296,6 +298,8 @@ div.characters {
   background-color: black;
   box-shadow: 6px 6px #222222;
   border: 2px solid #999999;
+    max-height: 640px;
+    overflow-y: scroll;
 
   > div {
     position: relative;
