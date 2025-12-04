@@ -824,6 +824,8 @@ div.preview {
       height: 100%;
       padding: .5rem;
 
+
+
       dl {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -948,3 +950,4 @@ div.preview {
     opacity: 0;
     z-index: -1;
 }
+
