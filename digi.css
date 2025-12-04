@@ -144,7 +144,7 @@
       summary:before {  top: .2rem;
   right: .5rem;}
 
-   li {max-height: 80px;}
+   li {max-height: 150px;}
 
 
    .sprite-stats {height: fit-content; width: 100%; max-width: 170px;}
