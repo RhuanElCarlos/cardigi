@@ -133,11 +133,22 @@
         position: sticky;
         top: .5rem;
         height: fit-content;
+        
 
         .preview-container {
           --sprite-tw: 220;
+          
         }
       }
+
+      summary:before {  top: .2rem;
+  right: .5rem;}
+
+   li {max-height: 80px;}
+
+
+   .sprite-stats {height: fit-content; width: 100%; max-width: 170px;}
+   
     }
   }
 }
@@ -914,12 +925,12 @@ summary {
 
 summary:before {
   content: '';
-  border-width: .5rem;
+  border-width: .4rem;
   border-style: solid;
   border-color: transparent transparent transparent #000000;
   position: absolute;
-  top: .5rem;
-  right: .1rem;
+  top: .6rem;
+  right: .5rem;
   transform: rotate(0);
   transform-origin: .2rem 50%;
   transition: .25s transform ease;
@@ -936,6 +947,6 @@ details summary::-webkit-details-marker {
 }
 
 details > ul {
-  padding-bottom: 1rem;
+  padding-bottom: .1rem;
   margin-bottom: 0;
 }
