@@ -144,10 +144,10 @@
       summary:before {  top: .2rem;
   right: .5rem;}
 
-   li {max-height: 150px;}
+   li {max-width: 150px;}
 
 
-   .sprite-stats {height: fit-content; width: 100%; max-width: 170px;}
+   .sprite-stats {height: fit-content; width: 100%;}
    
     }
   }
@@ -168,6 +168,8 @@
         grid-template-columns: repeat(2, minmax(110px, 1fr));
         grid-auto-rows: 160px;
       }
+
+       li {max-width: 200px;}
     }
   }
 }
@@ -190,7 +192,7 @@
 
       .characters {
         grid-template-columns: repeat(1, minmax(90px, 1fr));
-        grid-autp-rows: 120px;
+        grid-auto-rows: 120px;
 
         > div {
           .character > img {
@@ -215,13 +217,18 @@
 
 @media (width < 435px) {
   #app {
+
+      
+
     main.container {
       .characters {
-        grid-template-columns: repeat(1, minmax(80px, 1fr));
+        grid-template-columns: repeat(2, minmax(75px, 1fr));
         grid-auto-rows: 100px;
           max-height: 320px;
     overflow-y: scroll;
       }
+
+       li {max-width: 150px;}
     }
   }
 }
@@ -307,9 +314,9 @@ div.characters {
   grid-auto-rows: 160px;
   padding: .5rem;
   background-color: black;
-  box-shadow: 6px 6px #222222;
+  box-shadow: 5px 5px #222222;
   border: 2px solid #999999;
-    max-height: 640px;
+    max-height: 600px;
     overflow-y: scroll;
 
   > div {
@@ -892,7 +899,7 @@ div.preview {
     transition: .5s;
 }
 .box:hover input{
-    width: 20rem;
+    width: 280px;
     background: #3b3640;
     border-radius: 25px;
 }
