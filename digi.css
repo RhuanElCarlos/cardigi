@@ -228,10 +228,30 @@
     overflow-y: scroll;
       }
 
+       li {max-width: 100px;}
+    }
+  }
+}
+
+
+@media (width < 400px) {
+  #app {
+
+      
+
+    main.container {
+      .characters {
+        grid-template-columns: repeat(1, minmax(75px, 1fr));
+        grid-auto-rows: 100px;
+          max-height: 320px;
+    overflow-y: scroll;
+      }
+
        li {max-width: 150px;}
     }
   }
 }
+
 
 @media (prefers-reduced-motion) {
   * {
