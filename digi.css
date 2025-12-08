@@ -144,7 +144,7 @@
       summary:before {  top: .2rem;
   right: .5rem;}
 
-   li {max-width: 150px;}
+   li {max-width: 200px;}
 
 
    .sprite-stats {height: fit-content; width: 100%;}
@@ -169,7 +169,7 @@
         grid-auto-rows: 160px;
       }
 
-       li {max-width: 200px;}
+       li {max-width: 150px;}
     }
   }
 }
@@ -186,6 +186,8 @@
         }
       }
     }
+
+    li {max-width: 150px;}
 
     main.container {
       gap: 1rem;
