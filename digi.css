@@ -141,8 +141,7 @@
         }
       }
 
-      summary:before {  top: .2rem;
-  right: .5rem;}
+    
 
    li {max-width: 200px;}
 
@@ -169,7 +168,7 @@
         grid-auto-rows: 160px;
       }
 
-       li {max-width: 150px;}
+       li {max-width: 200px;}
     }
   }
 }
@@ -230,7 +229,7 @@
     overflow-y: scroll;
       }
 
-       li {max-width: 100px;}
+       li {max-width: 150px;}
     }
   }
 }
