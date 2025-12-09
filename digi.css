@@ -167,8 +167,10 @@
         grid-auto-rows: 160px;
       }
 
-       li {max-width: 200px;}
     }
+
+           li {max-width: 170px;}
+
   }
 }
 
@@ -184,8 +186,6 @@
         }
       }
     }
-
-    li {max-width: 150px;}
 
     main.container {
       gap: 1rem;
@@ -212,6 +212,8 @@
         }
       }
     }
+
+            li {max-width: 150px;};
   }
 }
 
