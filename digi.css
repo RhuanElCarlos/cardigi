@@ -169,7 +169,7 @@
 
     }
 
-           li {max-width: 170px;}
+           li {max-width: 150px;}
 
   }
 }
@@ -208,8 +208,18 @@
 
           .sprite-stats {
             font-size: .7rem;
+            max-width: 160px;
           }
         }
+
+        summary:before {
+  content: '';
+  border-width: .3rem;
+    top: .4rem;
+
+}
+
+        
       }
     }
 
@@ -927,7 +937,7 @@ summary {
 
 summary:before {
   content: '';
-  border-width: .4rem;
+  border-width: .45rem;
   border-style: solid;
   border-color: transparent transparent transparent #000000;
   position: absolute;
