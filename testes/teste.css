@@ -1,0 +1,409 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('https://assets.codepen.io/36869/MinecraftTen-VGORe.woff') format('woff');
+}
+
+@layer reset {
+  :root {
+    font-family: "Minecraft", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-content: center;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@layer main {
+  /* Frame start position */
+  @property --sprite-fs {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false
+  }
+
+  :root {
+   
+    /*--image-1: url(/cat.webp);*/
+    --image-1: url(bafkreie4g7vxnvozwcjroj7zwx23jjnd3hjufj5kfxqexqqcnu63evgtba.jpg);
+    /*--image-2: url(/spider.webp);*/
+    --image-2: url(https://assets.codepen.io/36869/spider.webp);
+    /*--image-3: url(/cow.webp);*/
+    --image-3: url(https://assets.codepen.io/36869/cow.webp);
+    /*--image-4: url(/creeper.webp);*/
+    --image-4: url(https://assets.codepen.io/36869/creeper.webp);
+    /*--image-5: url(/enderman.webp);*/
+    --image-5: url(https://assets.codepen.io/36869/enderman.webp);
+    /*--image-6: url(/evoker.webp);*/
+    --image-6: url(https://assets.codepen.io/36869/evoker.webp);
+    /*--image-7: url(/golem.webp);*/
+    --image-7: url(https://assets.codepen.io/36869/golem.webp);
+    /*--image-8: url(/horse.webp);*/
+    --image-8: url(https://assets.codepen.io/36869/horse.webp);
+    /*--image-9: url(/ocelot.webp);*/
+    --image-9: url(https://assets.codepen.io/36869/ocelot.webp);
+    /*--image-10: url(/panda.webp);*/
+    --image-10: url(https://assets.codepen.io/36869/panda.webp);
+    /*--image-11: url(/skeleton.webp);*/
+    --image-11: url(https://assets.codepen.io/36869/skeleton.webp);
+    /*--image-12: url(/wolf.webp);*/
+    --image-12: url(https://assets.codepen.io/36869/wolf.webp);
+    /*--image-13: url(/squid.webp);*/
+    --image-13: url(https://assets.codepen.io/36869/squid.webp);
+    /*--image-14: url(/fox.webp);*/
+    --image-14: url(https://assets.codepen.io/36869/fox.webp);
+    /*--image-15: url(/villager.webp);*/
+    --image-15: url(https://assets.codepen.io/36869/villager.webp);
+
+    --characater-1: 'Cat';
+    --characater-2: 'Spider';
+    --characater-3: 'Cow';
+    --characater-4: 'Creeper';
+    --characater-5: 'Enderman';
+    --characater-6: 'Evoker';
+    --characater-7: 'Steel golem';
+    --characater-8: 'Skeleton horse';
+    --characater-9: 'Ocelot';
+    --characater-10: 'Panda';
+    --characater-11: 'Skeleton';
+    --characater-12: 'Wolf';
+    --characater-13: 'Squid';
+    --characater-14: 'Fox';
+    --characater-15: 'Villager';
+        --characater-16: 'Villager';
+
+  }
+}
+
+
+
+
+
+#app {
+  display: grid;
+  gap: 1rem;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      --color: black;
+      --shadow-width: 2px;
+      --shadow-width-negative: calc(2px * -1);
+      color: white;
+      font-size: clamp(1.25rem, 0.875rem + 2vw, 2rem);
+      text-box: trim-both cap alphabetic;
+      text-shadow: 0 var(--shadow-width) 0 var(--color),
+      var(--shadow-width) 0 0 var(--color),
+      var(--shadow-width) var(--shadow-width) 0 var(--color),
+      var(--shadow-width-negative) var(--shadow-width-negative) 0 var(--color),
+      var(--shadow-width) var(--shadow-width-negative) 0 var(--color),
+      var(--shadow-width-negative) var(--shadow-width) 0 var(--color);
+    }
+
+    & > div {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-end;
+      opacity: .5;
+
+      small {
+        color: white;
+        width: 10rem;
+        text-align: right
+      }
+
+      kbd {
+        border: 2px solid #5e5e5e;
+        box-shadow: 6px 6px #222222;
+        font-size: 1.25rem;
+        font-weight: 600;
+        white-space: nowrap;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        width: 40px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+      }
+    }
+  }
+
+  main {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+
+
+.characters:has(div:nth-child(1) > input:checked) + .preview {
+  --name: var(--characater-1);
+
+  & > .preview-container {
+    --sprite-image: var(--image-1);
+    /* sprite columns */
+    --sprite-c: 1;
+    /* sprite image height */
+    --sprite-h: 850;
+    /* sprite image width */
+    --sprite-w: 850;
+    /* Frame frames */
+    --sprite-f: 1;
+    /* Frame end position */
+  }
+}
+
+div.preview {
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  height: fit-content;
+  place-items: center;
+  gap: .5rem;
+  padding: .5rem;
+  background-color: black;
+  border: 2px solid #4c8ee1;
+  box-shadow: 6px 6px #222222;
+  user-select: none;
+
+  &:before {
+    content: var(--name);
+    background: #adcbf1;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+  }
+
+  & > .preview-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: .5rem; 
+    grid-template-rows: 1fr auto;
+
+    /* frame target width */
+    --sprite-tw: 260;
+    --sprite-r: round(up, calc(var(--sprite-f) / var(--sprite-c)), 1);
+
+    --sprite-sw: calc(var(--sprite-w) / var(--sprite-c));
+    --sprite-ar: calc(var(--sprite-tw) / var(--sprite-sw));
+    --sprite-uh: calc(var(--sprite-h) * var(--sprite-ar));
+    --sprite-uw: calc(var(--sprite-w) * var(--sprite-ar));
+    --sprite-th: calc(var(--sprite-uh) / var(--sprite-r));
+
+    /* Y position, round to check next ROW */
+    /* X position, mod to check COLUMN */
+    /* animation duration based on frame rate */
+
+    & > .sprite-container {
+      position: relative;
+      z-index: 1;
+      background-color: rgb(244, 12, 12);
+      height: 100%;
+
+  
+      .sprite {
+        top: 50%;
+        position: relative;
+        translate: 0 -50%;
+        filter: drop-shadow(2px 4px 6px black);
+        height: calc(1px * var(--sprite-th));
+        width: calc(1px * var(--sprite-tw));
+        background-image: var(--sprite-image);
+        background-size: calc(1px * var(--sprite-uw)) calc(1px * var(--sprite-uh));
+        background-position: calc(-1px * var(--col)) calc(-1px * var(--row));
+        z-index: 1;
+        will-change: scale;
+        transition: scale 0.2s ease;
+
+        &:hover {
+          scale: 1.4;
+          --color: #ffda0e;
+          filter: drop-shadow(0px 1px 0px var(--color)) drop-shadow(-1px 0px 0px var(--color)) drop-shadow(1px 0px 0px var(--color)) drop-shadow(0px 1px 0px var(--color)) drop-shadow(0px -1px 0px var(--color)) drop-shadow(1px 0px 0px var(--color)) drop-shadow(2px 4px 6px black);
+        }
+      }
+    }
+
+
+    & > .sprite-stats {
+      background: #adcbf1;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: .5rem;
+      max-width: 260px;
+
+
+
+      dl {
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        dt, dd {
+          &:not(:last-of-type) {
+            border-bottom: 1px solid #99b3d3;
+          }
+        }
+
+        dd {
+          font-weight: bold;
+          font-variant-numeric: tabular-nums;
+          text-align: right;
+
+       
+        }
+      }
+    }
+  }
+}
+
+#pesq{
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-self: right;
+    background-color: #adcbf1;
+  border: 2px solid #4c8ee1;
+  box-shadow: 5px 2px #222222;
+  border-radius: 35px;
+}
+.box{
+    position: relative;
+}
+
+.input {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: 5px solid #070707;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #f2eceb;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 280px;
+    background: #3b3640;
+    border-radius: 25px;
+}
+.box i{
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translate(-50%,-50%);
+    font-size: 19px;
+    color: #0a0a0a;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
+
+li {overflow: scroll; max-height: 150px; overflow-x: hidden; font-size: small; font-weight: normal; padding-top: 5px;}
+
+
+
+
+
+summary {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+summary:before {
+  content: '';
+  border-width: .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #000000;
+  position: absolute;
+  top: .6rem;
+  right: .5rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+
+/* THE MAGIC 🧙‍♀️ */
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+details > ul {
+  padding-bottom: .1rem;
+  margin-bottom: 0;
+}
+
+.details {
+  
+  
+  ::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(41, 39, 39); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+}
