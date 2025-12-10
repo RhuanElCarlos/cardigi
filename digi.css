@@ -100,7 +100,7 @@
     /*--image-15: url(/villager.webp);*/
     --image-15: url(https://assets.codepen.io/36869/villager.webp);
 
-    --characater-1: 'Cat';
+    --characater-1: 'imperialdramon: Paladin Mode';
     --characater-2: 'Spider';
     --characater-3: 'Cow';
     --characater-4: 'Creeper';
@@ -122,6 +122,23 @@
 
 @media (width < 940px) {
   #app {
+
+    div.preview {
+ 
+
+  &:before {
+    content: var(--name);
+    background: #adcbf1;
+    width: 100%;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: bolder;
+    font-size: 1.4vw;
+  
+
+    box-sizing: border-box;
+  } }
+    
     main {
       .characters {
         grid-template-columns: repeat(3, minmax(110px, 1fr));
@@ -724,12 +741,13 @@ div.preview {
   &:before {
     content: var(--name);
     background: #adcbf1;
-    position: relative;
     width: 100%;
     text-align: center;
     line-height: 2.5rem;
     font-weight: bolder;
-    font-size: 1.25rem;
+    font-size: 15px;
+  
+
     box-sizing: border-box;
   }
 
