@@ -133,7 +133,7 @@
     text-align: center;
     line-height: 2.5rem;
     font-weight: bolder;
-    font-size: 1.4vw;
+    font-size: 9px;
   
 
     box-sizing: border-box;
@@ -169,6 +169,24 @@
 }
 
 @media (width < 680px) {
+
+
+  div.preview {
+ 
+
+  &:before {
+    content: var(--name);
+    background: #adcbf1;
+    width: 100%;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: bolder;
+    font-size: 18px;
+  
+
+    box-sizing: border-box;
+  } }
+
   #app {
     header {
       > div {
@@ -189,6 +207,8 @@
            li {max-width: 150px;}
 
   }
+
+  
 }
 
 @media (width < 560px) {
