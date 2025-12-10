@@ -741,7 +741,6 @@ div.preview {
     place-items: center;
     place-content: center;
     grid-template-rows: 1fr auto;
-    counter-reset: num var(--sprite-cf) col var(--sprite-cc) row var(--sprite-cr);
 
     /* frame target width */
     --sprite-tw: 260;
@@ -755,7 +754,6 @@ div.preview {
     --sprite-as: calc(var(--sprite-f) / var(--sprite-fr) * 1s);
 
     --sprite-cf: calc(var(--sprite-fs) + 1);
-    --sprite-cc: calc(mod(var(--sprite-fs), var(--sprite-c)) + 1);
     --sprite-cr: calc(round(down, calc(calc(var(--sprite-tw) * var(--sprite-fs)) / var(--sprite-uw)), 1) + 1);
     /* Y position, round to check next ROW */
     --row: calc(round(down, calc(calc(var(--sprite-tw) * var(--sprite-fs)) / var(--sprite-uw)), 1) * var(--sprite-th));
@@ -780,42 +778,6 @@ div.preview {
         }
       }
 
-      .sprite-direction {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        display: flex;
-
-        input {
-          appearance: none;
-          width: 26px;
-          height: 28px;
-
-          &:before {
-            font-size: 1.25rem;
-            opacity: .25;
-            cursor: pointer;
-          }
-
-          &:checked {
-            &:before {
-              opacity: .5;
-            }
-          }
-
-          &:first-child {
-            &:before {
-              content: "◀️";
-            }
-          }
-
-          &:last-child {
-            &:before {
-              content: "▶️";
-            }
-          }
-        }
-      }
 
       .sprite {
         top: 50%;
@@ -851,22 +813,11 @@ div.preview {
 
 
       dl {
-        display: grid;
-        grid-template-columns: 1fr auto;
+        div {display: flex; justify-content: space-between; border-bottom: 1px solid #99b3d3;
+}
+        
 
-        dt, dd {
-          &:not(:last-of-type) {
-            border-bottom: 1px solid #99b3d3;
-          }
-        }
-
-        dd {
-          font-weight: bold;
-          font-variant-numeric: tabular-nums;
-          text-align: right;
-
-       
-        }
+      
       }
     }
   }
@@ -979,3 +930,4 @@ details > ul {
 
 /* Handle on hover */
 }
+
