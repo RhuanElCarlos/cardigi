@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Minecraft';
-  src: url('https://assets.codepen.io/36869/MinecraftTen-VGORe.woff') format('woff');
+  font-family: 'Pixel Digivolve';
+  src: url('Pixel\ Digivolve.woff') format('woff');
 }
 
 @layer reset {
   :root {
-    font-family: "Minecraft", sans-serif;
+    font-family: "Pixel Digivolve", sans-serif;
     font-optical-sizing: auto;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: bolder;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -318,7 +318,7 @@
         border: 2px solid #5e5e5e;
         box-shadow: 6px 6px #222222;
         font-size: 1.25rem;
-        font-weight: 600;
+        font-weight: bolder;
         white-space: nowrap;
         height: 100%;
         aspect-ratio: 1 / 1;
@@ -728,7 +728,7 @@ div.preview {
     width: 100%;
     text-align: center;
     line-height: 2.5rem;
-    font-weight: 700;
+    font-weight: bolder;
     font-size: 1.25rem;
     box-sizing: border-box;
   }
@@ -931,3 +931,4 @@ details > ul {
 /* Handle on hover */
 }
 
+span {font-weight: 1900; font-family: Impact;}
