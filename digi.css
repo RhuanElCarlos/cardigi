@@ -162,7 +162,12 @@
    li {max-width: 200px;}
 
 
-   .sprite-stats {height: fit-content; width: 100%;}
+   .sprite-stats {height: fit-content; width: 100%; font-size: 9px;}
+   
+        summary:before {
+  content: '';
+  border-width: .3rem;
+    top: .4rem;}
    
     }
   }
@@ -848,7 +853,9 @@ div.preview {
       padding: .5rem;
       max-width: 260px;
 
+div {gap: 5px;}
 
+dt {align-self: center;}
 
       dl {
         div {display: flex; justify-content: space-between; border-bottom: 1px solid #99b3d3;
@@ -970,3 +977,7 @@ details > ul {
 }
 
 span {font-weight: 1900; font-family: Impact;}
+
+#alter {font-family: Pixel Digivolve; display: flex; justify-self: center; align-self: center; text-align: center;}
+
+dl {align-self: center;}
